@@ -1,9 +1,9 @@
 # archlinux install guide
 
 # vim /etc/pacman.d/mirrorlist
-systemctl stop reflector
-# ping baidu.com
-# timedatectl set-ntp true
+#systemctl stop reflector
+#ping baidu.com
+#timedatectl set-ntp true
 # fdisk /dev/sda      # create new GPT
 # fdisk /dev/nvmen0   # create new GPT
 # fdisk /dev/nvmen0   # p1 --> efi, p2 --> lvm
@@ -41,14 +41,15 @@ echo -e "127.0.0.1        localhost\n::1              localhost\n127.0.1.1      
 systemctl enable NetworkManager
 
 # vim /etc/mkinitcpio.conf --> add lvm2 between block and filesystems , line $HOOKS
-mkinitcpio -p
+#mkinitcpio -p
 # passwd
-pacman -S intel-ucode
-pacman -S grub efibootmgr
-grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
-grub-mkconfig -o /boot/grub/grub.cfg
+#pacman -S intel-ucode
+#pacman -S grub efibootmgr
+#grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+#grub-mkconfig -o /boot/grub/grub.cfg
 
-exit
-umount -R /mnt
-reboot
+# don't uncomment
+#exit
+#umount -R /mnt
+#reboot
 
