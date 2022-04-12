@@ -15,6 +15,6 @@ pacman -S fcitx5-im fcitx5-chinese-addons fcitx5-rime fcitx5-qt fcitx5-gtk fcitx
 
 echo -e "GTK_IM_MODULE=fcitx\nQT_IM_MODULE=fcitx\nXMODIFIERS=@im=fcitx\nSDL_IM_MODULE=fcitx
 
-pacman -S noto-fonts-emoji wqy-microhei wqy-zenhei wqy-bitmapfont
+pacman -S noto-fonts-emoji wqy-microhei wqy-zenhei wqy-bitmapfont ttf-arphic-ukai ttf-arphic-uming
 
 systemctl enable bluetooth
